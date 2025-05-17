@@ -1,5 +1,7 @@
+# name: M.V.Vamsidhar Reddy
 # Linux-IPC--Pipes
 Linux-IPC-Pipes
+
 
 # Ex03-Linux IPC - Pipes
 
@@ -50,7 +52,6 @@ client(p1[1],p2[0]);
 wait(waits); 
 return 0; 
 } 
-
 void server(int rfd,int wfd) 
 { 
 int i,j,n; 
@@ -71,7 +72,6 @@ int i,j,n; char fname[2000];
 char buff[2000];
 printf("ENTER THE FILE NAME :");
 scanf("%s",fname);
-printf("CLIENT SENDING THE REQUEST .... PLEASE WAIT\n");
 sleep(10);
 write(wfd,fname,2000);
 n=read(rfd,buff,2000);
@@ -80,10 +80,14 @@ printf("THE RESULTS OF CLIENTS ARE ...... \n"); write(1,buff,n);
 }
 ```
 
+
+
 ## OUTPUT
-![368436572-bc22623e-085c-4ddb-a18d-d0f870a43aad](https://github.com/user-attachments/assets/40dd20bc-da36-4a1d-9766-45f07062b815)
+![Screenshot 2025-05-03 151808](https://github.com/user-attachments/assets/e4a55e5d-c967-4779-bb0a-850a89546e23)
+
 
 ## C Program that illustrate communication between two process using named pipes using Linux API system calls
+
 ```
 #include <unistd.h>
 #include <stdlib.h>
@@ -95,10 +99,14 @@ int res = mkfifo("/tmp/my_fifo", 0777);
 if (res == 0) printf("FIFO created\n");
 exit(EXIT_SUCCESS);
 }
+
 ```
 
+
+
 ## OUTPUT
-![368436701-5f3b0f8d-afaf-4e88-97ae-fa9eccaec929](https://github.com/user-attachments/assets/337655e9-7d69-4488-af12-3f5d8653aa61)
+![Screenshot 2025-05-03 151754](https://github.com/user-attachments/assets/e2c12da0-2db8-467e-a315-1c7f0068015c)
+
 
 # RESULT:
 The program is executed successfully.
